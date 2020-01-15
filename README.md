@@ -1,2 +1,5 @@
 # 441-work
-Homework repo for UMontana Media Arts, Web Technologies (MART441) course
+Homework repo for MART441 Web Technologies
+
+Base URL for site:
+https://katholmgren.github.io/441-work/
