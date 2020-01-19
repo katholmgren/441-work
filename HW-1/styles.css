@@ -27,12 +27,28 @@ body, html {
   color: white;
 }
 
+.nav-item {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.nav-item:hover {
+    font-style: italic;
+    color: pink;
+}
+
 .grid {
   padding: 5em 50px 5em;
 }
 
 #pitch {
   background-color: lightgray;
+}
+
+.footer {
+  display: inline-grid;
 }
 
 /* Smartphones break point*/
