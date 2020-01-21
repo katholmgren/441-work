@@ -6,32 +6,33 @@ body, html {
 }
 
 .hero-image {
-  /* Darken hero image so text stands out */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./imgs/hw1-hero.jpeg");
-  /* Set image height */
-  height: 100%;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Darken hero image so text stands out */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./imgs/hw1-hero.jpeg");
+    /* Set image height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero-text {
-  /* Place text near the top of the hero */
-  text-align: center;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+    /* Place text near the top of the hero */
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
+/* Fake navigation menu */
 .nav-item {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
 }
 
 .nav-item:hover {
@@ -40,30 +41,33 @@ body, html {
 }
 
 .grid {
-  padding: 5em 50px 5em;
+    padding: 5em 50px 5em;
 }
 
-#pitch {
-  background-color: lightgray;
+#whyme {
+    background-color: lightgray;
 }
 
 .footer {
-  display: inline-grid;
+    display: inline-grid;
 }
 
-/* Smartphones break point*/
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
+#umt {
+  /* Center logo vertically in footer */
+    transform: translate(0, -175%);
 }
 
 /* Large screens break point*/
 @media only screen  and (min-width : 1824px) {
-/* Styles */
+    p {
+      font-size: 19px;
+    }
 }
 
+/* Phone break point*/
 @media only screen and (max-device-width: 1024px) {
- .hero-image {
- background-attachment: scroll;
- height: -30%;
- }
+   .hero-image {
+   background-attachment: scroll; /* Disable paralax */
+   height: -30%; /* Adjust hero so my face shows */
+   }
 }
