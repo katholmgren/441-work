@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <title>Choose Your Adventure</title>
+      <meta name="author" content="Katherine Holmgren`">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+<body>
+  <script src="script.js"></script>
+
+<!-- FIRST CHOICE -->
+  <button type="button" id="berry1" onclick="eatBerryOne()">Berry 1</button>
+  <button type="button" id="berry2" onclick="eatBerryOne()">Berry 2</button> <!-- result: feel hot -->
+      <p id="berry1text"></p>  <!-- result: blind -->
+      <p id="berry2text"></p>  <!-- result: blind -->
+
+    <!-- SECOND CHOICES -->
+    <!-- Blind Choices -->
+    <button type="button" id="yell" onclick="eatBerryOne()"></button> <!-- result: help comes -->
+    <button type="button" id="blind-car" onclick="goCarBlind()"></button> <!-- result: which way? -->
+    <!-- Heat Choices -->
+    <button type="button" id="river" onclick="eatBerryOne()"></button> <!-- result: danger -->
+    <button type="button" id="hot-car" onclick="goCarHot()"></button> <!-- result: which way? -->
+      <!-- THIRD CHOICES -->
+      <!-- Blind Yell Choices -->
+      <button type="button" id="blind-berry1" onclick="blindBerryOne()">Eat Berry 1</button> <!-- result: healed -->
+      <button type="button" id="blind-berry2" onclick="blindBerryTwo()">Eat Berry 2</button> <!-- result: tasty berry -->
+      <button type="button" id="no-more-berries" onclick="noBerries()">Yeah, no thanks</button> <!-- result: blind -->
+      <!-- Blind Car Choices -->
+      <button type="button" id="blind-left" onclick="blindLeft()">Go Left</button> <!-- result: find car, stay blind-->
+      <button type="button" id="blind-right" onclick="blindRight()">Go Right</button> <!-- result: find treasure -->
+      <!-- Heat River Choices -->
+      <button type="button" id="boat" onclick="swimRescue()">Swim to Rescue</button> <!-- result: stolen credit card-->
+      <button type="button" id="sparkly" onclick="swimSparkly()">Pretty Sparkly!</button> <!-- result: Kansas -->
+      <!-- Heat Car Choices -->
+      <button type="button" id="heat-left" onclick="hotLeft()">Go Left</button> <!-- result: find car, hot forever-->
+      <button type="button" id="heat-right" onclick="hotRight()">Go Right</button> <!-- result: medicinal salve -->
+
+</body>
+</html>
