@@ -9,32 +9,47 @@
     </head>
 
 <body>
-<!-- function doSomething(choice)
-{
-   if(choice == 1)
-   {
-      console.log("choice 1 was chosen");
-   }
-   else if(choice 2 == 1)
-   {
-     console.log("choice 2 was chosen");
-   }
-}
+  <script>
+    function whichBlind(choice){};
+    function whichHot(choice){};
+  </script>
 
-<a href="#" onclick="doSomething(1)">Choice 1</a>
-<a href="#" onclick="doSomething(2)">Choice 2</a> -->
+  <a href="#" onclick="whichBerry(1)">Berry 1</a>
+  <a href="#" onclick="whichBerry(2)">Berry 2</a>
+  <br>
+
+  <a id ="test" href="#" onclick="whichBlind(1)"></a>
+  <a id ="test2" href="#" onclick="whichBlind(2)"></a>
+  <br>
+
+  <a id ="test3" href="#" onclick="whichHot(1)"></a>
+  <a id ="test4" href="#" onclick="whichHot(2)"></a>
+
 <script>
 function whichBerry(choice){
+  // BERRY ONE -----------------------------------------------------------------
    if(choice == 1){
-      console.log("berry 1 was chosen")
+      document.getElementById("test").innerHTML = "Choose to Yell";
+      document.getElementById("test2").innerHTML = "Choose to go to car";
+
+      // Yell Choices
+      function whichBlind(choice){
+        if (choice == 1){
+          console.log("You chose to yell for help");
+        }
+        // Blind Find Car Choices
+        else if(choice == 2){
+          console.log("You blindly chose to find car");
+        }
+      }
    }
+   // BERRY TWO ---------------------------------------------------------------
    else if(choice == 2){
-     console.log("berry 2 was chosen");
+     document.getElementById("test3").innerHTML = "Choose to jump in river";
+     document.getElementById("test4").innerHTML = "Choose to run to car";
+
    }
 }
 </script>
-
-<a href="#" onclick="whichBerry(1)">Choice 1</a>
-<a href="#" onclick="whichBerry(2)">Choice 2</a>
 </body>
 </html>
