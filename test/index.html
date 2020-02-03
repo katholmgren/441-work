@@ -10,43 +10,50 @@
 
 <body>
   <script>
-    function whichBlind(choice){};
-    function whichHot(choice){};
+    function doSomething(choice){};
   </script>
 
-  <a href="#" onclick="whichBerry(1)">Berry 1</a>
-  <a href="#" onclick="whichBerry(2)">Berry 2</a>
+  <a href="#" onclick="doSomething(1)">Berry 1</a>
+  <a href="#" onclick="doSomething(2)">Berry 2</a>
   <br>
 
-  <a id ="test" href="#" onclick="whichBlind(1)"></a>
-  <a id ="test2" href="#" onclick="whichBlind(2)"></a>
+  <a id ="yell" href="#" onclick="doSomething(3)"></a>
+  <a id ="car" href="#" onclick="doSomething(4)"></a>
   <br>
 
-  <a id ="test3" href="#" onclick="whichHot(1)"></a>
-  <a id ="test4" href="#" onclick="whichHot(2)"></a>
+  <a id ="yellBerry1" href="#" onclick="doSomething(5)"></a>
+  <a id ="yellBerry2" href="#" onclick="doSomething(6)"></a>
+  <a id ="noMore" href="#" onclick="doSomething(7)"></a>
+
+  <a id ="blindLeft"  href="#" onclick="doSomething(8)"></a>
+  <a id = "blindRight" href="#" onclick="doSomething(9)"></a>
+
+  <a id= "river" href="#" onclick="doSomething(10)"></a>
+  <a id = "hotCar" href="#" onclick="doSomething(11)"></a>
 
 <script>
-function whichBerry(choice){
+function doSomething(choice){
   // BERRY ONE -----------------------------------------------------------------
-   if(choice == 1){
-      document.getElementById("test").innerHTML = "Choose to Yell";
-      document.getElementById("test2").innerHTML = "Choose to go to car";
+   if(choice == 1){ // If you chose berry 1
+      document.getElementById("yell").innerHTML = "Choose to Yell"; // Display yell choice
+      document.getElementById("car").innerHTML = "Choose to go to car"; // Display car choice
+}
+          if (choice == 3){
+            document.getElementById("yellBerry1").innerHTML = "Berry 1"; // Display "berry 1" choice
+            document.getElementById("yellBerry2").innerHTML = "Berry 2"; // Display "berry 2" choice
+            document.getElementById("noMore").innerHTML = "No more berries for me"; // Display "no more berries" choice
 
-      // Yell Choices
-      function whichBlind(choice){
-        if (choice == 1){
-          console.log("You chose to yell for help");
-        }
-        // Blind Find Car Choices
-        else if(choice == 2){
-          console.log("You blindly chose to find car");
-        }
-      }
-   }
+          }
+          else if(choice == 4){ // Else if you chose to go to car
+            document.getElementById("left").innerHTML = "Go left"; // Display "Go Left" choice
+            document.getElementById("right").innerHTML = "Go right"; // Display "Go Right" choice
+          }
+
+
    // BERRY TWO ---------------------------------------------------------------
-   else if(choice == 2){
-     document.getElementById("test3").innerHTML = "Choose to jump in river";
-     document.getElementById("test4").innerHTML = "Choose to run to car";
+   else if(choice == 2){ // If you chose Berry 2
+     document.getElementById("river").innerHTML = "Choose to jump in river";
+     document.getElementById("hotCar").innerHTML = "Choose to run to car";
 
    }
 }
