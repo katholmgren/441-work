@@ -6,38 +6,99 @@
       <title>Choose Your Adventure</title>
       <meta name="author" content="Katherine Holmgren`">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./styles.css">
     </head>
 
 <body>
   <script src="script.js"></script>
 
-<!-- FIRST CHOICE -->
-  <button type="button" id="berry1" onclick="eatBerryOne()">Berry 1</button>
-  <button type="button" id="berry2" onclick="eatBerryOne()">Berry 2</button> <!-- result: feel hot -->
-      <p id="berry1text"></p>  <!-- result: blind -->
-      <p id="berry2text"></p>  <!-- result: blind -->
+  <div id="page1">
+    <p></p>
+    <button type="button" id="berry1" onclick="myFunction()"></button>
+    <button type="button" id="berry2" onclick="myFunction()"></button>
+  </div>
 
-    <!-- SECOND CHOICES -->
-    <!-- Blind Choices -->
-    <button type="button" id="yell" onclick="eatBerryOne()"></button> <!-- result: help comes -->
-    <button type="button" id="blind-car" onclick="goCarBlind()"></button> <!-- result: which way? -->
-    <!-- Heat Choices -->
-    <button type="button" id="river" onclick="eatBerryOne()"></button> <!-- result: danger -->
-    <button type="button" id="hot-car" onclick="goCarHot()"></button> <!-- result: which way? -->
-      <!-- THIRD CHOICES -->
-      <!-- Blind Yell Choices -->
-      <button type="button" id="blind-berry1" onclick="blindBerryOne()">Eat Berry 1</button> <!-- result: healed -->
-      <button type="button" id="blind-berry2" onclick="blindBerryTwo()">Eat Berry 2</button> <!-- result: tasty berry -->
-      <button type="button" id="no-more-berries" onclick="noBerries()">Yeah, no thanks</button> <!-- result: blind -->
-      <!-- Blind Car Choices -->
-      <button type="button" id="blind-left" onclick="blindLeft()">Go Left</button> <!-- result: find car, stay blind-->
-      <button type="button" id="blind-right" onclick="blindRight()">Go Right</button> <!-- result: find treasure -->
-      <!-- Heat River Choices -->
-      <button type="button" id="boat" onclick="swimRescue()">Swim to Rescue</button> <!-- result: stolen credit card-->
-      <button type="button" id="sparkly" onclick="swimSparkly()">Pretty Sparkly!</button> <!-- result: Kansas -->
-      <!-- Heat Car Choices -->
-      <button type="button" id="heat-left" onclick="hotLeft()">Go Left</button> <!-- result: find car, hot forever-->
-      <button type="button" id="heat-right" onclick="hotRight()">Go Right</button> <!-- result: medicinal salve -->
+      <!-- BERRY 1 ----------------------------->
+      <div id="page1.1">
+        <p></p>
+        <button type="button" id="yell" onclick="myFunction()"></button>
+        <button type="button" id="blindCar" onclick="myFunction()"></button>
+        </div>
 
+        <!-- Yell Choices -->
+        <div id="page1.1.1">
+          <p></p>
+          <button type="button" id="anotherBerry1" onclick="myFunction()"></button>
+          <button type="button" id="anotherBerry2" onclick="myFunction()"></button>
+          <button type="button" id="noBerry" onclick="myFunction()"></button>
+        </div>
+
+            <p id="anotherBerry1.1.1.1"></p> <!-- Berry 1 Result-->
+            <p id="anotherBerry1.1.1.2"></p> <!-- Berry 2 Result-->
+            <p id="hotLeft1.1.1.3"></p> <!-- No Berry Result-->
+
+        <!-- Car Choices -->
+        <div id="page1.1.2">
+          <p></p>
+          <button type="button" id="blindLeft" onclick="myFunction()"></button>
+          <button type="button" id="blindRight" onclick="myFunction()"></button>
+        </div>
+
+            <p id="blindLeftt1.1.2.1"></p> <!-- Left Result-->
+            <p id="blindRight1.1.2.2."></p> <!-- Right Result-->
+        <!-- End BERRY 1 ----------------------------->
+
+
+    <!-- BERRY 2 --------------------------------->
+    <div id="page1.2">
+      <p></p>
+      <button type="button" id="river" onclick="myFunction()"></button>
+      <button type="button" id="hotCar" onclick="myFunction()"></button>
+    </div>
+
+        <!-- River Choices -->
+        <div id="page1.2.1">
+          <p></p>
+          <button type="button" id="boat" onclick="myFunction()"></button>
+          <button type="button" id="sparkly" onclick="myFunction()"></button>
+        </div>
+
+            <p id="boat1.2.1.1"></p> <!-- Boat Result-->
+            <p id="sparkly1.2.1.2"></p> <!-- Sparkly Result-->
+
+        <!-- Car Choices -->
+        <div id="page1.2.2">
+          <p></p>
+          <button type="button" id="hotLeft" onclick="myFunction()"></button>
+          <button type="button" id="hotRight" onclick="myFunction()"></button>
+        </div>
+
+            <p id="hotLeft1.2.2.1"></p> <!-- Left Result-->
+            <p id="hotRight1.2.2.2"></p> <!-- Right Result-->
+    <!-- End BERRY 2 ----------------------------->
+
+
+
+
+
+
+
+
+
+
+    <!-- SECOND CHOICES
+    <button type="button" id="yell" onclick="eatBerryOne()"></button>
+    <button type="button" id="blind-car" onclick="goCarBlind()"></button>
+    <button type="button" id="river" onclick="eatBerryOne()"></button>
+    <button type="button" id="hot-car" onclick="goCarHot()"></button>
+      <button type="button" id="blind-berry1" onclick="blindBerryOne()">Eat Berry 1</button>
+      <button type="button" id="blind-berry2" onclick="blindBerryTwo()">Eat Berry 2</button>
+      <button type="button" id="no-more-berries" onclick="noBerries()">Yeah, no thanks</button>
+      <button type="button" id="blind-left" onclick="blindLeft()">Go Left</button>
+      <button type="button" id="blind-right" onclick="blindRight()">Go Right</button>
+      <button type="button" id="boat" onclick="swimRescue()">Swim to Rescue</button>
+      <button type="button" id="sparkly" onclick="swimSparkly()">Pretty Sparkly!</button>
+      <button type="button" id="heat-left" onclick="hotLeft()">Go Left</button>
+      <button type="button" id="heat-right" onclick="hotRight()">Go Right</button>  -->
 </body>
 </html>
