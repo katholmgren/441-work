@@ -1,21 +1,27 @@
 body {
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: 'Crimson Text', serif;
     font-size: 22px;;
-    overflow-x: hidden;
-    overflow-y: auto;
+}
+
+.page{
+    position: relative;
+    display: block;
+}
+
+.page:active{
+    display: block;
 }
 
 .links {
-    display: inline-block;
     text-align: center;
-    color: blue;
+    color: darkgreen;
   }
 
 .links:hover {
     font-style: italic;
-    color: green;
+    color: darkblue;
 }
