@@ -1,3 +1,21 @@
 body {
-  text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Crimson Text', serif;
+    font-size: 22px;;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.links {
+    display: inline-block;
+    text-align: center;
+    color: blue;
+  }
+
+.links:hover {
+    font-style: italic;
+    color: green;
 }
