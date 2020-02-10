@@ -12,7 +12,7 @@
             document.getElementById("btnSubmit2").style.display="block";
 
 
-            myPage.innerHTML = "Oh you chose berry 1. You are blind now. Do you want to yell for help or return to the car to call 911?";
+            myPage.innerHTML = "You chose Berry 1. You are blind now. Do you want to yell for help or return to the car to call 911?";
         }
         else if(myChoice === "Berry 2")
         {
@@ -23,7 +23,7 @@
             document.getElementById("choice3").style.display="block";
             document.getElementById("btnSubmit3").style.display="block";
 
-            myPage.innerHTML = "You chose berry 2. You are now feeling very hot. Do you want to jump in the river or return to the car?";
+            myPage.innerHTML = "You chose Berry 2. You are now feeling a little hot. Do you want to jump in the river or return to the car?";
 
         }
         else
@@ -47,7 +47,7 @@
           document.getElementById("choice4").style.display="block";
           document.getElementById("btnSubmit4").style.display="block";
 
-          myPage.innerHTML = "You yell and a woman comes and offers you two berries. Do you want berry 1 or berry 2?";
+          myPage.innerHTML = "You yell and a woman comes and offers you two berries. She says one of them will heal your eyes. Do you want Berry 1 or Berry 2?";
         }
         else if(myChoice2 === "Car")
         {
@@ -80,7 +80,7 @@
           document.getElementById("choice6").style.display="block";
           document.getElementById("btnSubmit6").style.display="block";
 
-          myPage.innerHTML = "You jump in the river. Do you want to swim to a boat or to something sparkly?";
+          myPage.innerHTML = "You jump into the river and start sinking. Luckily, a boat is right over there. You also see something sparkly. Do you want to swim to the boat or swim to the sparkly?";
         }
 
         else if(myChoice3 === "Car")
@@ -107,7 +107,7 @@
 
         if(myChoice4 === "Berry 1")
         {
-          document.getElementById("mainImage").src="./imgs/home.jpg";
+          document.getElementById("mainImage").src="./imgs/hw-4-home.jpg";
           document.getElementById("choice4").style.display="none";
           document.getElementById("btnSubmit4").style.display="none";
 
@@ -124,7 +124,7 @@
           document.getElementById("btnSubmit4").style.display="none";
           document.getElementById("playAgain").style.display="block";
 
-          myPage.innerHTML = "You are now blind and sick. And in the woods alone forever and ever and ever and ever <i>and ever</i>.";
+          myPage.innerHTML = "You now have intense food-poisoning. You are way too trusting. You should have listened to your grandmother when she told you not to eat berries in the woods.";
         } else
         {
           myPage.innerHTML = "Invalid Answer"
@@ -143,7 +143,14 @@
           document.getElementById("btnSubmit5").style.display="none";
           document.getElementById("playAgain").style.display="block";
 
-          myPage.innerHTML = "You go left and fall into a ditch. Then your blindness heals and you find 500 million dollars in the ditch. It's your lucky day!";
+          // For loop not working yet:
+          // Trying to get multiple pictures to appear in a row. Might need to assign its own function?
+          // for(var i = 0; i < 5; i++)
+          // {
+          //   document.getElementById("memeImage").style.display="block";
+          // }
+
+          myPage.innerHTML = "You go left and fall into a ditch. Then your blindness starts to heal and you find 500 million dollars. It's your lucky day!";
         }
 
         else if(myChoice5 === "Right")
@@ -153,7 +160,8 @@
           document.getElementById("btnSubmit5").style.display="none";
           document.getElementById("playAgain").style.display="block";
 
-          myPage.innerHTML = "You find your car and call 911, but your blindness never heals. But you learn to be content (No small feat. Congratualations).";
+
+          myPage.innerHTML = "You find your car and call 911, but your blindness never heals. But you learn to be content despite your loss. Better luck next time!";
         }
     }
 
@@ -179,7 +187,7 @@
           document.getElementById("btnSubmit6").style.display="none";
           document.getElementById("playAgain").style.display="block";
 
-          myPage.innerHTML = "The sparkly is a berry! So yes, you eat it. Turns out, it's a magic berry. You find yourself in Kansas (much like Dorthy's shoes in Wizard of Oz). You've always wanted to go to Kansas.";
+          myPage.innerHTML = "The sparkly is a berry! Without thinking, you toss it in your mouth. Turns out, it's a magic berry. You find yourself in Kansas. You've always wanted to go to Kansas!";
         }
       }
 
@@ -197,7 +205,7 @@
             document.getElementById("choice10").style.display="block";
             document.getElementById("btnSubmit10").style.display="block";
 
-            myPage.innerHTML = "You collapse from heat stroke. Do you dream about elves or dragons?";
+            myPage.innerHTML = "You collapse from heatstroke. Do you dream about elves or dragons?";
           }
 
           else if(myChoice7 === "Right")
@@ -222,7 +230,7 @@
 
             if(myChoice8 === "Home")
             {
-              document.getElementById("mainImage").src="./imgs/home.jpg";
+              document.getElementById("mainImage").src="./imgs/home-interior.jpg";
               document.getElementById("choice8").style.display="none";
               document.getElementById("btnSubmit8").style.display="none";
 
@@ -239,7 +247,7 @@
               document.getElementById("btnSubmit8").style.display="none";
               document.getElementById("playAgain").style.display="block";
 
-              myPage.innerHTML = "The doctor says your eyes are fine, but you're a little delusional. He wants you to take expensive medicine. So you jump out the window and go home.";
+              myPage.innerHTML = "The doctor says your eyes are fine, but unfortunately you're a little delusional. He wants you to take expensive medicine. So you jump out the window and go home.";
             }
             else
             {
@@ -254,12 +262,12 @@
 
               if(myChoice9 === "Blog")
               {
-                document.getElementById("mainImage").src="./imgs/famous.jpg";
+                document.getElementById("mainImage").src="./imgs/home-blog.jpg";
                 document.getElementById("choice9").style.display="none";
                 document.getElementById("btnSubmit9").style.display="none";
                 document.getElementById("playAgain").style.display="block";
 
-                myPage.innerHTML = "You write your blog and it goes viral! You become the next Bear Grylls. You will go blind many more times in your life (Ah, the life of a survival TV star).";
+                myPage.innerHTML = "You start a blog and it goes viral! You become the next Bear Grylls. You will go blind many more times in your life (Ah, the life of a survival TV star).";
               }
 
               else if(myChoice9 === "Grilled Cheese")
@@ -269,7 +277,7 @@
                 document.getElementById("btnSubmit9").style.display="none";
                 document.getElementById("playAgain").style.display="block";
 
-                myPage.innerHTML = "That was one fine grilled cheese sandwich. You reflect on your experience and take a nap. This has been a day of character building. That's for sure";
+                myPage.innerHTML = "That was one fine grilled cheese sandwich. You reflect on your experience and take a nap. This has been a day of character building. That's for sure.";
               }
               else
               {
@@ -284,22 +292,22 @@
 
               if(myChoice10 === "Elves")
               {
-                document.getElementById("mainImage").src="./imgs/elves.jpg";
+                document.getElementById("mainImage").src="./imgs/creepy-elf.jpg";
                 document.getElementById("choice10").style.display="none";
                 document.getElementById("btnSubmit10").style.display="none";
                 document.getElementById("playAgain").style.display="block";
 
-                myPage.innerHTML = "You elves crown you as their emperor. When you wake up, the heat is gone but so is your kingdom.";
+                myPage.innerHTML = "The elves crown you as their emperor. When you wake up, the heat is gone, but so is your elf kingdom.";
               }
 
               else if(myChoice10 === "Dragons")
               {
-                document.getElementById("mainImage").src="./imgs/dragons.jpg";
+                document.getElementById("mainImage").src="./imgs/dragon.jpg";
                 document.getElementById("choice10").style.display="none";
                 document.getElementById("btnSubmit10").style.display="none";
                 document.getElementById("playAgain").style.display="block";
 
-                myPage.innerHTML = "You dream of adopting a dragon named Burt. When you wake up, the heat is gone but so is Burt.";
+                myPage.innerHTML = "You dream of adopting a dragon named Burt. When you wake up, the heat is gone, but so is Burt.";
               }
               else
               {
