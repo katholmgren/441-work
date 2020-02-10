@@ -28,12 +28,7 @@ button {
 @media only screen and (max-width: 400px) {
     body {
       width: 100%;
+      margin: auto;
+      text-align: center;
     }
-    img {
-      width: 200px !important;
-    }
-
-   /*input{
-     width: inherit;
-   }*/
 }
