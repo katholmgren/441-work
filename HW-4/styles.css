@@ -24,11 +24,11 @@ button {
     font-size: 18px;
 }
 
-/* Phone break point*/
+/* Phone break point
 @media only screen and (max-device-width: 1024px) {
     body {
       width: 100%;
       margin: auto;
       text-align: center;
     }
-}
+}*/
