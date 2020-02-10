@@ -28,10 +28,12 @@ button {
 @media only screen and (max-device-width: 1024px) {
     html, body {
       overflow-x: hidden;
-      max-width: 100%;
+      width: 100%;
     }
     body {
       postion: relative;
+      margin: auto;
+      padding: 10 px;
     }
 
    /*input{
