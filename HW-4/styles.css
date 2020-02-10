@@ -27,7 +27,8 @@ button {
 /* Phone break point*/
 @media only screen and (max-device-width: 1024px) {
    mainImage {
-   max-width: 100%;
+   width: 100%;
    height: auto;
+   margin: auto;
    }
 }
