@@ -26,9 +26,13 @@ button {
 
 /* Phone break point*/
 @media only screen and (max-device-width: 1024px) {
-   mainImage {
-   width: 100%;
-   height: auto;
-   margin: auto;
+   #mainImage {
+     width: 100%;
+     height: auto;
+     margin: auto;
+   }
+
+   input{
+     width: inherit;
    }
 }
