@@ -25,10 +25,13 @@ button {
 }
 
 /* Phone break point*/
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 1024px) {
     body {
       width: 100%;
       margin: auto;
       text-align: center;
+    }
+    #mainImage {
+      max-width: 100% !important;
     }
 }
