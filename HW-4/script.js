@@ -122,6 +122,7 @@
           document.getElementById("mainImage").src="./imgs/leftright.jpg";
           document.getElementById("choice4").style.display="none";
           document.getElementById("btnSubmit4").style.display="none";
+          document.getElementById("playAgain").style.display="block";
 
           myPage.innerHTML = "You are now blind and sick. And in the woods alone forever and ever and ever and ever <i>and ever</i>.";
         } else
@@ -140,6 +141,7 @@
           document.getElementById("mainImage").src="./imgs/money.jpg";
           document.getElementById("choice5").style.display="none";
           document.getElementById("btnSubmit5").style.display="none";
+          document.getElementById("playAgain").style.display="block";
 
           myPage.innerHTML = "You go left and fall into a ditch. Then your blindness heals and you find 500 million dollars in the ditch. It's your lucky day!";
         }
@@ -149,6 +151,7 @@
           document.getElementById("mainImage").src="./imgs/blind.jpg";
           document.getElementById("choice5").style.display="none";
           document.getElementById("btnSubmit5").style.display="none";
+          document.getElementById("playAgain").style.display="block";
 
           myPage.innerHTML = "You find your car and call 911, but your blindness never heals. But you learn to be content (No small feat. Congratualations).";
         }
@@ -164,6 +167,7 @@
           document.getElementById("mainImage").src="./imgs/pirate.jpg";
           document.getElementById("choice6").style.display="none";
           document.getElementById("btnSubmit6").style.display="none";
+          document.getElementById("playAgain").style.display="block";
 
           myPage.innerHTML = "You swim to the boat. It's a pirate. He steals your credit card. Sorry, buddy.";
         }
@@ -173,6 +177,7 @@
           document.getElementById("mainImage").src="./imgs/kansas.jpg";
           document.getElementById("choice6").style.display="none";
           document.getElementById("btnSubmit6").style.display="none";
+          document.getElementById("playAgain").style.display="block";
 
           myPage.innerHTML = "The sparkly is a berry! So yes, you eat it. Turns out, it's a magic berry. You find yourself in Kansas (much like Dorthy's shoes in Wizard of Oz). You've always wanted to go to Kansas.";
         }
@@ -200,6 +205,7 @@
             document.getElementById("mainImage").src="./imgs/famous.jpg";
             document.getElementById("choice7").style.display="none";
             document.getElementById("btnSubmit7").style.display="none";
+            document.getElementById("playAgain").style.display="block";
 
             myPage.innerHTML = "You run through the woods and trip. You fall into a puddle of medicinal salve. It heals all your burns! So you bottle it, return to civilization, and go down in pharmaceutical history.";
           }
@@ -231,6 +237,7 @@
               document.getElementById("mainImage").src="./imgs/hospital.jpg";
               document.getElementById("choice8").style.display="none";
               document.getElementById("btnSubmit8").style.display="none";
+              document.getElementById("playAgain").style.display="block";
 
               myPage.innerHTML = "The doctor says your eyes are fine, but you're a little delusional. He wants you to take expensive medicine. So you jump out the window and go home.";
             }
@@ -250,6 +257,7 @@
                 document.getElementById("mainImage").src="./imgs/famous.jpg";
                 document.getElementById("choice9").style.display="none";
                 document.getElementById("btnSubmit9").style.display="none";
+                document.getElementById("playAgain").style.display="block";
 
                 myPage.innerHTML = "You write your blog and it goes viral! You become the next Bear Grylls. You will go blind many more times in your life (Ah, the life of a survival TV star).";
               }
@@ -259,7 +267,7 @@
                 document.getElementById("mainImage").src="./imgs/grilled-cheese.jpg";
                 document.getElementById("choice9").style.display="none";
                 document.getElementById("btnSubmit9").style.display="none";
-
+                document.getElementById("playAgain").style.display="block";
 
                 myPage.innerHTML = "That was one fine grilled cheese sandwich. You reflect on your experience and take a nap. This has been a day of character building. That's for sure";
               }
@@ -279,15 +287,17 @@
                 document.getElementById("mainImage").src="./imgs/elves.jpg";
                 document.getElementById("choice10").style.display="none";
                 document.getElementById("btnSubmit10").style.display="none";
+                document.getElementById("playAgain").style.display="block";
 
                 myPage.innerHTML = "You elves crown you as their emperor. When you wake up, the heat is gone but so is your kingdom.";
               }
 
-              else if(myChoice9 === "Dragons")
+              else if(myChoice10 === "Dragons")
               {
                 document.getElementById("mainImage").src="./imgs/dragons.jpg";
                 document.getElementById("choice10").style.display="none";
                 document.getElementById("btnSubmit10").style.display="none";
+                document.getElementById("playAgain").style.display="block";
 
                 myPage.innerHTML = "You dream of adopting a dragon named Burt. When you wake up, the heat is gone but so is Burt.";
               }
@@ -296,3 +306,13 @@
                 myPage.innerHTML = "Invalid Answer"
               }
             }
+
+              // Information on restart found at:
+              // https://stackoverflow.com/questions/37858483/how-to-add-a-play-again-feature-to-javascript-game
+              // https://stackoverflow.com/questions/3715047/how-to-reload-a-page-using-javascript
+              function clickPlayAgain(click) {
+                  if (click == 1) {
+                    location.reload();
+                    return false;
+            }
+          }

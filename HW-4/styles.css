@@ -4,7 +4,6 @@ body {
   width: 600px;
   margin: auto;
   padding: 20px;
-  border: 1px solid black;
   font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
@@ -14,6 +13,7 @@ body {
 }
 
 input {
+    width: inherit;
     font-family: 'Crimson Text', serif;
     font-size: 18px;
     text-align: center;
@@ -22,5 +22,4 @@ input {
 button {
     font-family: serif;
     font-size: 18px;
-    text-align: center;
 }
