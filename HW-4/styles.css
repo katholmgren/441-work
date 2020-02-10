@@ -26,11 +26,12 @@ button {
 
 /* Phone break point*/
 @media only screen and (max-device-width: 1024px) {
-    body {
-      width: 85% !important;
+    html, body {
+      width: 50% !important;
+      overflow-x: hidden;
     }
     #mainImage {
-     max-width: 85% !important;
+     max-width: 50% !important;
      margin: auto;
    }
 
