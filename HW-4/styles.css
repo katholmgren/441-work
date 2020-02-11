@@ -35,4 +35,7 @@ button {
       width: 50%;
       margin: auto;
     }
+    #mainImage{
+      width: 40% !important;
+    }
 }
