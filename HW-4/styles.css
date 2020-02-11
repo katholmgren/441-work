@@ -1,15 +1,14 @@
 body {
-  text-align: center;
-  background-color: white;
-  width: 37.5rem;
+  width: 50%;
   margin: auto;
-  padding: 1.25rem;
+  padding: 1.25em;
+  border: 1px solid black;
   font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
 
 #mainImage {
-    width: 37.5rem;
+  width: 100%;
 }
 
 .interact{
@@ -32,10 +31,8 @@ button {
 /*Phone break point*/
 @media only screen and (max-device-width: 1024px) {
     body {
-      width: 50%;
+      width: 100%
       margin: auto;
     }
-    #mainImage{
-      width: 40% !important;
-    }
+
 }
