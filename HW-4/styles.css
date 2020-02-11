@@ -1,32 +1,24 @@
 body {
-  width: 50%;
+  width: 600px;
   margin: auto;
-  padding: 1.25em;
-  border: 1px solid black;
+  padding: 20px;
   font-family: 'Crimson Text', serif;
   font-size: 22px;
+  text-align: center;
 }
 
 #mainImage {
-  width: 100%;
-}
-
-input {
-    font-family: 'Crimson Text', serif;
-    font-size: 18px;
+  width: 600px;
 }
 
 button {
-    font-family: serif;
-    font-size: 18px;
+  font-size: 18px;
+  text-align: center;
+  font-family: 'Crimson Text', serif;
 }
 
-/*Phone break point*/
-@media only screen and (max-device-width: 1024px) {
-    html, body {
-      margin: auto;
-      padding: 0;
-      width: 100%
-    }
-
-}
+input {
+  width: inherit;
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  text-align: center;
