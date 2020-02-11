@@ -1,7 +1,7 @@
 body {
   text-align: center;
   background-color: white;
-  width: 600px;
+  width: 37.5rem;
   margin: auto;
   padding: 20px;
   font-family: 'Crimson Text', serif;
@@ -9,7 +9,7 @@ body {
 }
 
 #mainImage {
-    width: 600px;
+    width: 37.5rem;
 }
 
 input {
@@ -24,11 +24,11 @@ button {
     font-size: 18px;
 }
 
-/* Phone break point
+/*Phone break point*/
 @media only screen and (max-device-width: 1024px) {
     body {
       width: 100%;
       margin: auto;
       text-align: center;
     }
-}*/
+}
