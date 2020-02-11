@@ -3,13 +3,18 @@ body {
   background-color: white;
   width: 37.5rem;
   margin: auto;
-  padding: 20px;
+  padding: 1.25rem;
   font-family: 'Crimson Text', serif;
   font-size: 22px;
 }
 
 #mainImage {
     width: 37.5rem;
+}
+
+.interact{
+    margin: auto;
+    text-align: auto;
 }
 
 input {
@@ -27,8 +32,13 @@ button {
 /*Phone break point*/
 @media only screen and (max-device-width: 1024px) {
     body {
-      max-width: 100%;
+      width: 50%;
       margin: auto;
-      text-align: center;
+    }
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 40%;
     }
 }
