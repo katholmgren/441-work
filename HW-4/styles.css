@@ -21,11 +21,12 @@ button {
     font-size: 18px;
 }
 
-/*Phone break point
+/*Phone break point*/
 @media only screen and (max-device-width: 1024px) {
-    body {
+    html, body {
+      margin: auto;
       padding: 0;
       width: 100%
     }
 
-}*/
+}
