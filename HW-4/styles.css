@@ -17,10 +17,8 @@ body {
 }
 
 input {
-    width: inherit;
     font-family: 'Crimson Text', serif;
     font-size: 18px;
-    text-align: center;
 }
 
 button {
@@ -31,6 +29,7 @@ button {
 /*Phone break point*/
 @media only screen and (max-device-width: 1024px) {
     body {
+      padding: 0;
       width: 100%
       margin: auto;
     }
