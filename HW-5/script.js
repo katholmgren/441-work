@@ -15,9 +15,6 @@ function printBlanks()
     // iterate through the image tag ids and sets the source
         document.getElementById(imageTags[i]).src= blankImagePath;
     }
-
-
-
 }
 
 function createRandomImageArray()
@@ -33,24 +30,19 @@ function createRandomImageArray()
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
           // create an if statement that says if the total number added is less than 6, then
         // add the image to the actual image array
-        if(count[randomNumber] < 6)
+        if(count[randomNumber] < 2)
         {
             actualImages.push(actualImagePath[randomNumber]);
             // then add one to the array that makes sure only two images can be added
             count[randomNumber] = count[randomNumber] + 1;
         }
     }
-
-
-
-
-
 }
 
 function flipImage(number)
 {
     document.getElementById(imageTags[number]).src= actualImages[number];
-        // this should be a quick function that just changes
+        // a function that just changes
         // the image based on what number was pressed
 
 

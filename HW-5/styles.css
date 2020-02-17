@@ -1,4 +1,4 @@
-h1 {
+body {
 	 font-family: 'Crimson Text', serif;
  }
 
@@ -14,7 +14,7 @@ h1 {
 	display: table-header-group;
 }
 .divTableCell, .divTableHead {
-	border: 1px solid #999999;
+	/* Border was here */
 	display: table-cell;
 	padding: 3px 10px;
 }
