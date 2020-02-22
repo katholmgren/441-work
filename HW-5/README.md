@@ -17,6 +17,10 @@ For this week's homework, we started to make a matching game based on a grid. Fo
 
 ### Difficulties
 
-It was nice having an easier assignment this week for the three day weekend. I understand this week's course material, but not in application so I will be studying the homework tonight. Most of difficulites are with gitHub desktop. I'm getting the following error that won't let me push my work to github.com.
+It was nice having an easier assignment this week for the three day weekend. I understand this week's course material, but I don't think I could make the homework without using the example. I'll study the example tonight. Most of my difficulties were with gitHub Desktop. I'm getting the following error that won't let me push my work to github.com:
 
-![Hero Screenshot](./imgs/cyov-hw-4.png)
+![GitHub Desktop Error](./imgs/github-error.png)
+
+Following their suggestions hasn't worked yet.
+
+I had the same problem last week, but I fixed it by reinstalling the app. Now it's not working again.  I'll just upload my work from the website this week.
