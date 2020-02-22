@@ -4,7 +4,9 @@ var blankImagePath = "imgs/blank-filler.jpg"; // create a variable with the blan
 
 var firstNumber = -1;
 var secondNumber = -1;
-var player = {"firstname":"", "lastname":""}; // JSON declaration
+var misses = 0; // Starting miss count
+var player = {"firstname":"", "lastname":""}; // JSON name declaration
+var score = {"scoreTotal":""}; // JSON score declaration
 var actualImages = new Array(); // create a empty array for the actual images
 
 
@@ -63,6 +65,7 @@ function flipImage(number)
     if(actualImages[secondNumber] != actualImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
     {
         setTimeout(imagesDisappear, 1000); // calls a method after 1 second
+
     }
     // check to see if the images do match
     else if(actualImages[secondNumber] == actualImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0)
@@ -81,7 +84,16 @@ function imagesDisappear()
     document.getElementById(imageNames[secondNumber]).src = blankImagePath;
     firstNumber = -1;
     secondNumber = -1;
+    var myMiss = document.getElementById("misses");
+    if (firstNumber === -1){
+    misses += 1;
+    myMiss.innerHTML = misses;
+
+  }
 }
+
+
+
 
 // add to the JSON from the textboxes
 function addToPlayer()
@@ -90,7 +102,7 @@ function addToPlayer()
     //console.log(firstName);
     player.firstname = firstName;
     localStorage.setItem("playerInfo", JSON.stringify(player));
-    window.location = "index.html";
+    window.location = "game.html";
 }
 
 // get the information out of JSON
@@ -99,5 +111,25 @@ function playerInfo()
     var playerInformation = localStorage.getItem("playerInfo");
     player = JSON.parse(playerInformation);
     console.log(player.firstname);
+}
 
+
+
+
+// add to the JSON from the score
+function addToScore()
+{
+    var score = document.getElementById("score").value;
+    //console.log(score);
+    score.scoreTotal = score;
+    localStorage.setItem("scoreTotal", JSON.stringify(score));
+    window.location = "outro.html";
+}
+
+// get the information out of JSON
+function scoreInfo()
+{
+    var scoreInformation = localStorage.getItem("scoreInfo");
+    player = JSON.parse(scoreInformation);
+    console.log(score.scoreTotal);
 }
