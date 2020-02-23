@@ -4,7 +4,7 @@ var blankImagePath = "imgs/blank-filler.jpg"; // create a variable with the blan
 var firstNumber = -1;
 var secondNumber = -1;
 var misses = 0;
-var player = {"firstname":"", "lastname":"", "age":""}; // JSON name declaration
+var player = {"firstname":"", "lastname":"", "age":"", "attempts": 0}; // JSON name declaration
 var actualImages = new Array(); // create an empty array for the actual images
 
 function printBlanks(){
@@ -51,7 +51,6 @@ function flipImage(number){
 }
 
 function imagesDisappear(){
-    console.log(firstNumber);
     document.getElementById(imageNames[firstNumber]).src = blankImagePath;
     document.getElementById(imageNames[secondNumber]).src = blankImagePath;
     firstNumber = -1;
@@ -67,7 +66,6 @@ function addToPlayer(){ // add to the JSON from the textboxes
     var firstName = document.getElementById("txtFirstName").value;
     var lastName = document.getElementById("txtLastName").value;
     var age = document.getElementById("txtAge").value;
-
     //console.log(firstName);
     player.firstname = firstName;
     player.lastname = lastName;
@@ -82,4 +80,18 @@ function playerInfo(){ // get the information out of JSON
     console.log(player.firstname);
     console.log(player.lastname);
     console.log(player.age);
+    window.location = "results.html"
 }
+
+// function addToScore(){
+//     var score = document.getElementById("scoreResult").value;
+//     localStorage.setItem("scoreInfo", JSON.stringify(player));
+//     player.attempts = score;
+//     window.location = "results.html"
+// }
+//
+// function scoreInfo(){
+//     var scoreInformation = localStorage.getItem("scoreInfo");
+//     player = JSON.parse(playerInformation);
+//     console.log(player.attempts);
+// }
