@@ -3,8 +3,9 @@ var imageNames = ["image1", "image2", "image3", "image4", "image5", "image6","im
 var blankImagePath = "imgs/blank-filler.jpg"; // create a variable with the blank image name
 var firstNumber = -1;
 var secondNumber = -1;
+var match = 0;
 var misses = 0;
-var player = {"firstname":"", "lastname":"", "age":"", "attempts": 0}; // JSON name declaration
+var player = {"firstname":"", "lastname":"", "age":"", "misses": 0}; // JSON name declaration
 var actualImages = new Array(); // create an empty array for the actual images
 
 function printBlanks(){
@@ -47,6 +48,8 @@ function flipImage(number){
     else if(actualImages[secondNumber] == actualImages[firstNumber] && firstNumber >= 0 && secondNumber >= 0){
         firstNumber = -1;
         secondNumber = -1;
+        match += 1; // Keeps track of how many images are matched
+        allMatch();
     }
 }
 
@@ -58,7 +61,13 @@ function imagesDisappear(){
     var myMiss = document.getElementById("misses");
     if (firstNumber === -1){
     misses += 1;
-    myMiss.innerHTML = misses;
+    myMiss.innerHTML = misses; // Display miss count on game page
+    }
+}
+
+function allMatch(){ // Redirects to results page after game
+    if(match === 6){
+      window.location = "results.html";
     }
 }
 
@@ -77,21 +86,9 @@ function addToPlayer(){ // add to the JSON from the textboxes
 function playerInfo(){ // get the information out of JSON
     var playerInformation = localStorage.getItem("playerInfo");
     player = JSON.parse(playerInformation);
+    name.innerHTML = player.firstname;
     console.log(player.firstname);
     console.log(player.lastname);
     console.log(player.age);
-    window.location = "results.html"
+    console.log(misses);
 }
-
-// function addToScore(){
-//     var score = document.getElementById("scoreResult").value;
-//     localStorage.setItem("scoreInfo", JSON.stringify(player));
-//     player.attempts = score;
-//     window.location = "results.html"
-// }
-//
-// function scoreInfo(){
-//     var scoreInformation = localStorage.getItem("scoreInfo");
-//     player = JSON.parse(playerInformation);
-//     console.log(player.attempts);
-// }
