@@ -19,7 +19,7 @@ function printBlanks(){
 }
 
 function createRandomImageArray(){
-    var actualImagePath = ["imgs/flauna-edit.jpg", "imgs/hedge-edit.jpg", "imgs/mushroom-edit.jpg", "imgs/october-edit.jpg", "imgs/system-edit.jpg", "imgs/vangogh-edit.jpg"];
+    var actualImagePath = ["imgs/fauna-edit.jpg", "imgs/trees-edit.jpg", "imgs/mushroom-edit.jpg", "imgs/october-edit.jpg", "imgs/system-edit.jpg", "imgs/vangogh-edit.jpg"];
     var count = [0,0,0,0,0,0]; // make sure the images only get added twice
     while(actualImages.length < 12){ // check to see if our actual image array is full
         var randomNumber = Math.floor(Math.random() * actualImagePath.length)
