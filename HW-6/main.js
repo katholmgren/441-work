@@ -4,7 +4,8 @@ var blankImagePath = "imgs/blank-filler.jpg"; // create a variable with the blan
 var firstNumber = -1;
 var secondNumber = -1;
 var match = 0;
-var player = {"firstname":"", "lastname":"", "age":"", "misses": 0}; // JSON name declaration
+var missAmmount = 0;
+var player = {"firstname":"", "lastname":"", "age":"", "misses": ""}; // JSON name declaration
 var actualImages = new Array(); // create an empty array for the actual images
 
 function printBlanks(){
@@ -59,14 +60,15 @@ function imagesDisappear(){
     secondNumber = -1;
     var myMiss = document.getElementById("misses");
     if (firstNumber === -1){
-    player.misses += 1;
-    myMiss.innerHTML = player.misses; // Display miss count on game page
-    console.log(player.misses);
+    missAmmount += 1;
+    myMiss.innerHTML = missAmmount; // Display miss count on game page
     }
 }
 
 function allMatch(){ // Redirects to results page after game
     if(match === 6){
+      player.misses = missAmmount;
+      localStorage.setItem("playerInfo", JSON.stringify(player));
       window.location = "results.html";
     }
 }
@@ -75,11 +77,10 @@ function addToPlayer(){ // add to the JSON from the textboxes
     var firstName = document.getElementById("txtFirstName").value;
     var lastName = document.getElementById("txtLastName").value;
     var age = document.getElementById("txtAge").value;
-    //var misses = document.getElementById("scoreResult").value;
     player.firstname = firstName;
     player.lastname = lastName;
     player.age = age;
-    player.misses = misses;
+    player.misses = missAmmount;
     localStorage.setItem("playerInfo", JSON.stringify(player));
     window.location = "game.html";
 }
@@ -89,5 +90,9 @@ function playerInfo() {
     playerInfo = JSON.parse(result);
     document.getElementById("nameResult").innerHTML = "Congrats " + JSON.parse(result).firstname + " " + JSON.parse(result).lastname + "!";
     document.getElementById("ageResult").innerHTML = "You did pretty well for being " + JSON.parse(result).age + " years old.";
-    document.getElementById("scoreResult").innerHTML = JSON.parse(result).misses;
+    document.getElementById("scoreResult").innerHTML = "You messed up " + JSON.parse(result).misses + " times.";
+}
+
+function playAgain(){
+    window.location = "game.html";
 }

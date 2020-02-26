@@ -1,5 +1,9 @@
 body {
-	 font-family: 'Crimson Text', serif;
+	font-family: 'Crimson Text', serif;
+	background-image: url("./imgs/hw-6-vines.png");
+	background-repeat: no-repeat;
+	background-postion: left bottom;
+	background-size: cover;
  }
 
 .divTable{
