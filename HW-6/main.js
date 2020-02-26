@@ -4,7 +4,7 @@ var blankImagePath = "imgs/blank-filler.jpg"; // create a variable with the blan
 var firstNumber = -1;
 var secondNumber = -1;
 var match = 0;
-var missAmmount = 0;
+var missAmount = 0;
 var player = {"firstname":"", "lastname":"", "age":"", "misses": ""}; // JSON name declaration
 var actualImages = new Array(); // create an empty array for the actual images
 
@@ -60,14 +60,14 @@ function imagesDisappear(){
     secondNumber = -1;
     var myMiss = document.getElementById("misses");
     if (firstNumber === -1){
-    missAmmount += 1;
-    myMiss.innerHTML = missAmmount; // Display miss count on game page
+    missAmount += 1;
+    myMiss.innerHTML = missAmount; // Display miss count on game page
     }
 }
 
 function allMatch(){ // Redirects to results page after game
     if(match === 6){
-      player.misses = missAmmount;
+      player.misses = missAmount;
       localStorage.setItem("playerInfo", JSON.stringify(player));
       window.location = "results.html";
     }
@@ -80,7 +80,7 @@ function addToPlayer(){ // add to the JSON from the textboxes
     player.firstname = firstName;
     player.lastname = lastName;
     player.age = age;
-    player.misses = missAmmount;
+    player.misses = missAmount;
     localStorage.setItem("playerInfo", JSON.stringify(player));
     window.location = "game.html";
 }
