@@ -67,6 +67,9 @@ function imagesDisappear(){
 
 function allMatch(){ // Redirects to results page after game
     if(match === 6){
+      var result = localStorage.getItem("playerInfo");
+      player = JSON.parse(result);
+
       player.misses = missAmount;
       localStorage.setItem("playerInfo", JSON.stringify(player));
       window.location = "results.html";
@@ -88,9 +91,9 @@ function addToPlayer(){ // add to the JSON from the textboxes
 function playerInfo() {
     var result = localStorage.getItem("playerInfo");
     playerInfo = JSON.parse(result);
-    document.getElementById("nameResult").innerHTML = "Congrats " + JSON.parse(result).firstname + " " + JSON.parse(result).lastname + "!";
-    document.getElementById("ageResult").innerHTML = "You did pretty well for being " + JSON.parse(result).age + " years old.";
-    document.getElementById("scoreResult").innerHTML = "You messed up " + JSON.parse(result).misses + " times.";
+    document.getElementById("nameResult").innerHTML = "Congrats " + playerInfo.firstname + " " + playerInfo.lastname + "!";
+    document.getElementById("ageResult").innerHTML = "You did pretty well for being " + playerInfo.age + " years old.";
+    document.getElementById("scoreResult").innerHTML = "You messed up " + playerInfo.misses + " times.";
 }
 
 function playAgain(){
