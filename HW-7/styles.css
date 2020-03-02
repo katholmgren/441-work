@@ -1,0 +1,12 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1.8em;
+}
+
+.text {
+    display: inline-block;
+}
+
+#btnSubmit {
+    font-family: 'Noto Sans JP', sans-serif;
+}
