@@ -1,11 +1,12 @@
+/* Katherine Holmgren
+  HW-8 stylesheet */
+/* Commented out borders were used for easy cloud identification*/
+
 body {
   font-family: 'Sigmar One', cursive;
   margin: 0;
   overflow: hidden;
   height: 100%;
-}
-
-.cloud {
 }
 
 #cloud-1{
