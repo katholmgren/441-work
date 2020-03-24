@@ -2,3 +2,8 @@ body {
 text-align: center;
 font-family: 'Crimson Text', serif;
 }
+
+button {
+  font-family: 'Crimson Text', serif;
+  font-size: 16px;
+}

@@ -16,12 +16,12 @@ For this week's homework we were supposed to use json, ajax, and JQuery to displ
 4. Analyze and alter example code
 5. Start over
 6. Basic index.html and stylesheet
-7. Make a JSON object
-8. Try to get JSON object to display
+7. Make JSON object
+8. Try to get JSON to display
 9. Spend a lot of time fixing syntax errors
-9. Troubleshooting
+10. Troubleshooting
+11. Out of time
 
 ### Difficulties
 
-
-![HW-9 Screenshot](./imgs/HW-9-screenshot.png)
+I had difficulty getting the JSON data to display, which was the core of the assignment. I got it working just 45 minutes before the deadline, so I didn't have time to be artistic with it. If I was to continue, I would like to add the entire json data sheet so I could retrieve a random Nobel Peace Prize winner every time. Then I would use JQuery to display the information in a more creative way.

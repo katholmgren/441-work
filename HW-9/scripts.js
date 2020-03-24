@@ -1,12 +1,12 @@
 
 $(document).ready(function () {
 
-$("button").click(function() {
+$("#btnSubmit").click(function() {
   $.getJSON("prize.json", function(result) { // Gets info from json file
     $.each(result, function(i, field) {
-      //var prize = _____?
-       $("#prizeInfo").append(field + " "); // What should I add in this section to make it work?
-      });
+      $("#prizeInfo").append(result.prizes[0].laureates[0].firstname + " " + result.prizes[0].laureates[0].surname
+      + "<br>" + result.prizes[0].laureates[0].motivation + "<br>");
     });
   });
+});
 });
