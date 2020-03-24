@@ -1,5 +1,4 @@
-{
-  "prizes":[{
+{"prizes":[{
   "year":"2019",
   "category":"chemistry",
   "laureates":[
@@ -20,5 +19,7 @@
     "firstname":"Akira",
     "surname":"Yoshino",
     "motivation":"\"for the development of lithium-ion batteries\"",
-    "share":"3"}]
-}]}
+    "share":"3"}
+  ]
+}
+]
