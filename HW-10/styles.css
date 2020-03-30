@@ -1,3 +1,6 @@
+body{
+  font-family: 'Crimson Text', serif;
+}
 
 #myCanvas{
     border:black;
