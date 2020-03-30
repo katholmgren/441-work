@@ -1,9 +1,12 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
-var x = 50;
-var y = 50;
-ctx.fillStyle = "#0000FF";
+var userX = 50;
+var userY = 50;
+var x = 300;
+var y = 200;
+var randomNumber = Math.floor(Math.random() * 10)
 drawSquare();
+setInterval(update, 1000/60);
 
 $(document).ready(function(){
     $(this).keypress(function(event){
@@ -29,26 +32,39 @@ function getKey(event){ // Controls for blue square
     drawSquare();
 }
 
-function drawSquare(){
+function update(){ // Using this so I could set a framerate (see vars)
+     drawSquare();
+     x+= randomNumber; // Green square movement
+     y+= randomNumber;
+
+}
+
+function drawSquare(){ // My lovely blue squares
     ctx.clearRect(0,0,600,400);
-    ctx.fillRect(x, y, 20, 20);
+    ctx.fillStyle = "#0000FF";
+    ctx.fillRect(userX, userY, 20, 20); // User-controlled square
+    ctx.fillStyle = "green";
+    ctx.fillRect(x, y, 20, 20); // Free green square
 }
 
 function moveUp(){
-    y-=10;
+    userY-=10;
 }
 
 function moveDown(){
-    y+=10;
+    userY+=10;
 }
 
 function moveRight(){
-    x+=10;
+    userX+=10;
 }
 
 function moveLeft(){
-    x-=10;
+    userX-=10;
 }
+
+
+
 
 // function hasCollided(object1, object2) {
 //     return !(
