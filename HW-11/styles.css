@@ -6,4 +6,5 @@ body{
     border:black;
     border-style: solid;
     border-width: 2px;
+    background-image: url("./imgs/squares-abstract.jpg");
 }
