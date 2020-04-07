@@ -35,7 +35,7 @@ function setup(){
 }
 
 function draw(){
-     // drawSquare();
+     drawSquare();
      ctx.clearRect(x,y,600,400);
      ctx.fillStyle = square1.color;
      ctx.fillRect(square1.x, square1.y, square1.w, square1.h); // User-controlled blue square
@@ -44,9 +44,13 @@ function draw(){
      for(var i = 0; i < squareArray.length; i++){
          ctx.fillStyle = squareArray[i].color;
          ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].w, squareArray[i].h);
+         squareArray[i].x+= dx;
+         squareArray[i].y+= dy;
      }
      square2.x+= dx; // Green square movement
      square2.y+= dy;
+     // data.squares.x+= dx;
+     // data.squares.y+= dy;
 
      if(square2.x<0 || square2.x>600) dx=-dx; // Stay in the canvas
      if(square2.y<0 || square2.y>400) dy=-dy;
@@ -64,17 +68,18 @@ function draw(){
      }
 }
 
-// function drawSquare(){
-//     ctx.clearRect(0,0,800,600);
-//     ctx.fillStyle = square1.color;
-//     ctx.fillRect(square1.x, square1.y, square1.w, square1.h);
-//     ctx.fillStyle = square2.color;
-//     ctx.fillRect(square2.x, square2.y, square2.w, square2.h);
-//     for(var i = 0; i < squareArray.length; i++){
-//         ctx.fillStyle = squareArray[i].color;
-//         ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].w, squareArray[i].h);
-//     }
-// }
+function drawSquare(){
+    ctx.clearRect(0,0,800,600);
+    ctx.fillStyle = square1.color;
+    ctx.fillRect(square1.x, square1.y, square1.w, square1.h);
+    ctx.fillStyle = square2.color;
+    ctx.fillRect(square2.x, square2.y, square2.w, square2.h);
+    for(var i = 0; i < squareArray.length; i++){
+        ctx.fillStyle = squareArray[i].color;
+        ctx.fillRect(squareArray[i].x, squareArray[i].y, squareArray[i].w, squareArray[i].h);
+
+    }
+}
 
 function getKey(event){
     var char = event.which || event.keyCode;
@@ -86,9 +91,9 @@ function getKey(event){
         square1.y+=10;
     }
     if(actualLetter == "a"){
-        square1.x+=10;
+        square1.x-=10;
     }
     if(actualLetter == "d"){
-        square1.x-=10;
+        square1.x+=10;
     }
 }
