@@ -6,7 +6,7 @@ April 20, 2020
 
 [HW-13 Live Link](https://katholmgren.github.io/441-work/HW-13)
 
-This week we used three.js to experiment with working in 3d. This was new to me, so there was a lot of guess-and-check and googling this week. I ran into many issues, but now I have a basic understanding of what three.js can do. Because I'm not in the BFA, I've never used Maya or have made a model before.
+This week we used three.js to experiment with working in 3d. This was new to me, so there was a lot of guess-and-check and googling this week. I ran into many issues, but now I have a basic understanding of what three.js can do. Because I'm not in the BFA, I've never used Maya or have made a model before. I tried finding a free one, but I didn't have any luck.
 
 ### Process
 
@@ -20,6 +20,7 @@ This week we used three.js to experiment with working in 3d. This was new to me,
 7. Tried to separate the cube and cone
 8. Tried to add a background image
 9. Tried to add a border to the shapes
+10. Changed the colors
 
 ### Difficulties
 
