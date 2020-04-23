@@ -40,6 +40,57 @@ body, html {
     color: pink;
 }
 
+/* Dropdown */
+
+.dropdown {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    margin: 0;
+    background-color: lightgray;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: gray;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    text-align: left;
+    margin: 0;
+    padding: 12px 16px;
+    min-width: 7em;
+    text-decoration: none;
+}
+.dropdown-item:hover, .dropdown-item:hover a {
+    color: white;
+    background-color: pink;
+}
+/* end dropdown */
+
+.link {
+    display: inline-block;
+    color: gray;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.link:hover{
+    color: pink;
+}
+
+/* end NAVIGATION */
+
 .grid {
     padding: 5em 50px 5em;
 }
