@@ -1,6 +1,8 @@
 var successSound = new Audio();
 successSound.src = "sounds/happy-quick.wav";
 
+var pensCounter = 0;
+
 $(document).ready(function () {
 
     $("#office").hide(); // Originally hidden
@@ -21,17 +23,32 @@ $(document).ready(function () {
         if (mx>410 && mx<700 && my>420 && my<550){ // Soda Can (Something to drink)
             console.log("You clicked on the soda");
             successSound.play();
-            // $("kitchen").fadeOut();
-            // $("#office").fadeIn();
-            // $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn(1000);
             $("#sodatext").css("color", "red");
         }
         if (mx>440 && mx<500 && my>290 && my<345){ // Rubber Band
-            successSound.play();
             console.log("You clicked on the rubber band");
+            successSound.play();
             $("#rbtext").css("color", "green");;
         }
+        if (mx>270 && mx<475 && my>0 && my<70){ // Top Pen
+            console.log("You clicked on the top pen");
+            successSound.play();
+            pensCounter++;
+            //$("#penstext").css("color", "darkred");;
+        }
+        if (mx>25 && mx<100 && my>200 && my<300){ // Left Pen
+            console.log("You clicked on the left pen");
+            successSound.play();
+            pensCounter++;
+            //$("#penstext").css("color", "darkred");;
+        }
+        if (pensCounter == 2){ // Both Pens have been clicked
+            console.log("You found both pens");
+            //successSound.play();
+            $("#penstext").css("color", "darkred");;
+        }
     }
+
 
     const canvas = document.querySelector('canvas')
         canvas.addEventListener('mousedown', function(e) { // If mouse is down...

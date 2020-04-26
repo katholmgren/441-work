@@ -11,3 +11,8 @@
 6. Change soda text red if soda can is clicked
 7. Change rubber band text green if clicked
 8. Added success sound
+
+MOVE TO NEXT IMAGE CODE (use later)
+// $("kitchen").fadeOut();
+// $("#office").fadeIn();
+// $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn(1000);
