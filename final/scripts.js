@@ -14,11 +14,14 @@ $(document).ready(function () {
         var mx = event.clientX - rect.left // Mouse X
         var my = event.clientY - rect.top // Mouse Y
         console.log("x: " + mx + " y: " + my)
-        if (mx>200 && mx<400 && my>100 && my<300){// A mouse click at mx, my is in the square if (mx>x1 and mx<x2 and my>y1 and my<y2)
+
+        // A mouse click at mx, my is in the square if (mx>x1 and mx<x2 and my>y1 and my<y2)
+        if (mx>410 && mx<700 && my>420 && my<550){ // Soda Can (Something to drink)
             console.log("success");
-            $("kitchen").fadeOut();
-            $("#office").fadeIn();
-            $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn(1000);
+            // $("kitchen").fadeOut();
+            // $("#office").fadeIn();
+            // $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn(1000);
+            $("#sodatext").css("color", "red");;
         }
     }
 

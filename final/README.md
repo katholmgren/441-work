@@ -7,3 +7,5 @@
 2. Set up canvas with background images
 3. Transitioned between background and texts on click (with JQuery)
 4. Got mouse coordinate onclick
+5. Proceed to next screen based on if mouse click is in coordinate range
+6. Change soda text red if soda can is clicked
