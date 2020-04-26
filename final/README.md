@@ -11,6 +11,8 @@
 6. Change soda text red if soda can is clicked
 7. Change rubber band text green if clicked
 8. Added success sound
+9. Added pen counter (if both pens have been clicked, change text color)
+10. Added level 1 counter (if all items found, proceed to next level)
 
 MOVE TO NEXT IMAGE CODE (use later)
 // $("kitchen").fadeOut();
