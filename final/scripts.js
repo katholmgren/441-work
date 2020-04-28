@@ -3,16 +3,11 @@ successSound.src = "sounds/happy-quick.wav";
 
 var pensCounter = 0;
 var levelOneCounter = 0;
+var levelTwoCounter = 0;
 
 $(document).ready(function () {
 
-    $("#office").hide(); // Originally hidden
-
-    // $(".coveringCanvas").click(function () {
-    //     $("kitchen").fadeOut();
-    //     $("#office").fadeIn();
-    //     $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn(1000);
-    // });
+    $("#office").hide(); // Originally hidden image
 
     function getCursorPosition(canvas, event) { // Get coordinates
         const rect = canvas.getBoundingClientRect()
@@ -38,24 +33,47 @@ $(document).ready(function () {
             successSound.play();
             pensCounter++;
             levelOneCounter++;
-            //$("#penstext").css("color", "darkred");;
         }
         if (mx>25 && mx<100 && my>200 && my<300){ // Left Pen
             console.log("You clicked on the left pen");
             successSound.play();
             pensCounter++;
             levelOneCounter++;
-            //$("#penstext").css("color", "darkred");;
         }
         if (pensCounter == 2){ // Both Pens have been clicked
-            console.log("You've found both pens");
             //successSound.play();
             $("#penstext").css("color", "darkred");;
         }
-        if (levelOneCounter == 4){
-          $("kitchen").fadeOut("slow");
-          $("#office").fadeIn("slow");
-          $("#description").text("Scissors, seeds, and cards. Look very hard.").fadeIn("slow");
+        if (levelOneCounter == 4){ // ALL ITEMS FOUND. MOVE TO LEVEL 2.
+            $("kitchen").fadeOut("slow");
+            $("#office").fadeIn("slow");
+            $("#description").text("Two wooden clothes pins, a screwdriver, and chapstick. Think quick and take your pick.").fadeIn("slow");
+        }
+        // LEVEL TWO: Office
+        if (mx>538 && mx<600 && my>0 && my<60){ // Top Clothes Pin
+            console.log("You clicked the top clothes pin");
+            successSound.play();
+            levelTwoCounter++;
+        }
+        if (mx>175 && mx<285 && my>145 && my<200){ // Left Clothes Pin
+            console.log("You clicked the left clothes pin");
+            successSound.play();
+            levelTwoCounter++;
+        }
+        if (mx>102 && mx<190 && my>75 && my<130){ // Screwdriver
+            console.log("You clicked the screwdriver");
+            successSound.play();
+            levelTwoCounter++;
+        }
+        if (mx>715 && mx<750 && my>90 && my<200){ // Chapstick
+            console.log("You clicked the chapstick");
+            successSound.play();
+            levelTwoCounter++;
+        }
+        if (levelTwoCounter == 4){ // ALL ITEMS FOUND. MOVE TO LEVEL 3.
+            $("kitchen").fadeOut("slow");
+            $("#office").fadeOut("slow");
+            $("#description").text("Two wooden clothes pins, a screwdriver, and chapstick. Think quick and take your pick.").fadeIn("slow");
         }
     }
 
