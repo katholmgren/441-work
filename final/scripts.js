@@ -1,5 +1,9 @@
 var successSound = new Audio();
+var clapSound = new Audio();
+var yaySound = new Audio();
 successSound.src = "sounds/happy-quick.wav";
+clapSound.src = "sounds/clapping.wav";
+yaySound.src = "sounds/yay.wav";
 
 var pensCounter = 0;
 var levelOneCounter = 0;
@@ -10,6 +14,7 @@ $(document).ready(function () {
 
     $("#office").hide(); // Originally hidden image
     $("#tools").hide(); // Originally hidden image
+    $("#congrats").hide(); // Originally hidden text
 
 
     function getCursorPosition(canvas, event) { // Get coordinates
@@ -121,9 +126,14 @@ $(document).ready(function () {
             successSound.play();
             levelThreeCounter++;
         }
-        if (levelThreeCounter == 8){ // ALL ITEMS FOUND. MOVE TO LEVEL 3.
+        if (levelThreeCounter == 8){ // ALL ITEMS FOUND. MOVE TO END.
+            $("#office").hide();
+            $("kitchen").hide();
             $("#tools").fadeOut("slow");
             $("#description").text("CONGRATS! YOU FOUND THEM ALL!").fadeIn("slow");
+            yaySound.play();
+            clapSound.play();
+            $("#congrats").fadeIn("slow");
         }
     }
 

@@ -12,7 +12,10 @@
 7. Change rubber band text green if clicked
 8. Added success sound
 9. Added pen counter (if both pens have been clicked, change text color)
-10. Added level 1 counter (if all items found, proceed to next level)
+10. Added level counters (if all items found, proceed to next level)
+11. Did same proccess for level two items
+12. Level three items
+13. 
 
 MOVE TO NEXT IMAGE CODE (use later)
 // $("kitchen").fadeOut();
