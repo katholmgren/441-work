@@ -105,6 +105,26 @@ $(document).ready(function () {
             successSound.play();
             levelThreeCounter++;
         }
+        // End marbles
+        if (mx>210 && mx<250 && my>480 && my<520){ // Left Quarter
+            console.log("You clicked on the left quarter");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>595 && mx<640 && my>365 && my<410){ // Right Quarter
+            console.log("You clicked on the right quarter");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>650 && mx<790 && my>30 && my<145){ // Tape
+            console.log("You clicked on the tape");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (levelThreeCounter == 8){ // ALL ITEMS FOUND. MOVE TO LEVEL 3.
+            $("#tools").fadeOut("slow");
+            $("#description").text("CONGRATS! YOU FOUND THEM ALL!").fadeIn("slow");
+        }
     }
 
 
