@@ -4,10 +4,13 @@ successSound.src = "sounds/happy-quick.wav";
 var pensCounter = 0;
 var levelOneCounter = 0;
 var levelTwoCounter = 0;
+var levelThreeCounter = 0;
 
 $(document).ready(function () {
 
     $("#office").hide(); // Originally hidden image
+    $("#tools").hide(); // Originally hidden image
+
 
     function getCursorPosition(canvas, event) { // Get coordinates
         const rect = canvas.getBoundingClientRect()
@@ -71,9 +74,36 @@ $(document).ready(function () {
             levelTwoCounter++;
         }
         if (levelTwoCounter == 4){ // ALL ITEMS FOUND. MOVE TO LEVEL 3.
-            $("kitchen").fadeOut("slow");
+            $("#kitchen").fadeOut("slow");
             $("#office").fadeOut("slow");
-            $("#description").text("Two wooden clothes pins, a screwdriver, and chapstick. Think quick and take your pick.").fadeIn("slow");
+            $("#tools").fadeIn("slow");
+            $("#description").text("Five marbles, two quarters, and a role tape. Find them all and you'll escape.").fadeIn("slow");
+        }
+        //LEVEL THREE: Tools
+        if (mx>60 && mx<85 && my>150 && my<180){ // Top Left Blue Marble
+            console.log("You clicked on the top left blue marble");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>30 && mx<55 && my>470 && my<500){ // Bottom Left Yellow Marble
+            console.log("You clicked on the bottom left yellow marble");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>195 && mx<225 && my>350 && my<375){ // Bottom Left Yellow Marble #2
+            console.log("You clicked on the second yellow marble");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>435 && mx<465 && my>150 && my<180){ // Top Red Marble
+            console.log("You clicked on the top red marble");
+            successSound.play();
+            levelThreeCounter++;
+        }
+        if (mx>675 && mx<710 && my>305 && my<335){ // Right Red Marble
+            console.log("You clicked on the right red marble");
+            successSound.play();
+            levelThreeCounter++;
         }
     }
 
