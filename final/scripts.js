@@ -11,7 +11,7 @@ var levelTwoCounter = 0;
 var levelThreeCounter = 0;
 
 $(document).ready(function () {
-
+    $("kitchen").show();
     $("#office").hide(); // Originally hidden image
     $("#tools").hide(); // Originally hidden image
     $("#congrats").hide(); // Originally hidden text
