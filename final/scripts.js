@@ -15,6 +15,8 @@ $(document).ready(function () {
     $("#office").hide(); // Originally hidden image
     $("#tools").hide(); // Originally hidden image
     $("#congrats").hide(); // Originally hidden text
+    $("#fireworks").hide(); // Originally hidden image
+
 
 
     function getCursorPosition(canvas, event) { // Get coordinates
@@ -34,7 +36,7 @@ $(document).ready(function () {
             console.log("You clicked on the rubber band");
             successSound.play();
             levelOneCounter++;
-            $("#rbtext").css("color", "green");;
+            $("#rbtext").css("color", "green");
         }
         if (mx>270 && mx<475 && my>0 && my<70){ // Top Pen
             console.log("You clicked on the top pen");
@@ -126,17 +128,18 @@ $(document).ready(function () {
             successSound.play();
             levelThreeCounter++;
         }
-        if (levelThreeCounter == 8){ // ALL ITEMS FOUND. MOVE TO END.
+        if (levelThreeCounter === 8){ // ALL ITEMS FOUND. MOVE TO END.
             $("#office").hide();
-            $("kitchen").hide();
-            $("#tools").fadeOut("slow");
-            $("#description").text("CONGRATS! YOU FOUND THEM ALL!").fadeIn("slow");
+            $("#kitchen").hide();
+            $("#description").hide();
+            $("#tools").hide();
+            $("#fireworks").fadeIn("slow"); // Originally hidden image
+            $("#congrats").fadeIn("slow");
+            $("#ispy").text("I Spy with my little eye... A great puzzler!");
             yaySound.play();
             clapSound.play();
-            $("#congrats").fadeIn("slow");
         }
     }
-
 
     const canvas = document.querySelector('canvas')
         canvas.addEventListener('mousedown', function(e) { // If mouse is down...

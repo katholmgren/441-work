@@ -24,7 +24,13 @@ body{
 }
 
 #congrats {
+  color: "rgb(141, 2, 31)";
   font-family: 'Kaushan Script', cursive;
   text-align: center;
-  font-size: 48px;
+  font-size: 100px;
+}
+
+#fireworks{
+    width: 500px; height:350px;
+    position:absolute; top:0px; left:150px;
 }
