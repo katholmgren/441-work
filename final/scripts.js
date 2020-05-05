@@ -11,7 +11,7 @@ var levelTwoCounter = 0;
 var levelThreeCounter = 0;
 
 $(document).ready(function () {
-    $("kitchen").show();
+    // $("kitchen").show();
     $("#office").hide(); // Originally hidden image
     $("#tools").hide(); // Originally hidden image
     $("#congrats").hide(); // Originally hidden text
@@ -129,8 +129,8 @@ $(document).ready(function () {
             levelThreeCounter++;
         }
         if (levelThreeCounter === 8){ // ALL ITEMS FOUND. MOVE TO END.
-            $("#office").hide();
             $("#kitchen").hide();
+            $("#office").hide();
             $("#description").hide();
             $("#tools").hide();
             $("#fireworks").fadeIn("slow"); // Originally hidden image
